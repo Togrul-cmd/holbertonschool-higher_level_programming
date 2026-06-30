@@ -15,10 +15,10 @@ if __name__ == "__main__":
         b = int(argv[3])
         match argv[2]:
             case '+':
-            print('{} + {} = {}'.format(a, b, add(a, b)))
+                print('{} + {} = {}'.format(a, b, add(a, b)))
             case '-':
-            print('{} - {} = {}'.format(a, b, sub(a, b)))
+                print('{} - {} = {}'.format(a, b, sub(a, b)))
             case '*':
-            print('{} * {} = {}'.format(a, b, mul(a, b)))
+                print('{} * {} = {}'.format(a, b, mul(a, b)))
             case '/':
-            print('{} / {} = {}'.format(a, b, div(a, b)))
+                print('{} / {} = {}'.format(a, b, div(a, b)))
