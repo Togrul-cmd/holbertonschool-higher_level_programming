@@ -7,3 +7,4 @@ new_list = search_replace(my_list, 2, 89)
 print(new_list)
 print(my_list)
 
+a_dictionary = { 'language': "C", 'number': 13, 'track': "Low level" }
