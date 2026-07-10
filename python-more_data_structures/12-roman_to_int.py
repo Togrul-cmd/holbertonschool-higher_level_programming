@@ -6,14 +6,14 @@ def roman_to_int(roman_string):
     index = 0
     num = 0
     while index < len(roman_string):
-        str = roman_string[index]
-        while str in romans and index < len(roman_string):
+        s = roman_string[index]
+        while s in romans and index < len(roman_string):
             index += 1
             if index < len(roman_string):
-                str += roman_string[index]
-        if len(str) > 1 and not str in romans:    
-            num += romans[str[:-1]]
+                s += roman_string[index]
+        if len(s) > 1 and not s in romans:    
+            num += romans[s[:-1]]
         else:
-            num += romans[str]
+            num += romans[s]
     return num
         
