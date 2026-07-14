@@ -16,4 +16,3 @@ class Square:
         """This method calculates area of the square."""
         area = self.__size ** 2
         return area
-
