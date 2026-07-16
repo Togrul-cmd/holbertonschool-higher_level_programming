@@ -18,7 +18,7 @@ class Node:
     def data(self, value):
         """Checks data attribute and sets it."""
         if type(value) is not int:
-            raise TypeError('data must be an integer')
+            raise TypeError("data must be an integer")
         self.__data = value
 
     @property
