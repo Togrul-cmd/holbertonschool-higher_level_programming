@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Defines rectangle object wiht width and height attributes."""
+    """Defines rectangle object with width and height attributes."""
     number_of_instances = 0
     print_symbol = '#'
 
