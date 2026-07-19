@@ -1,0 +1,1 @@
+# These are solutions for additional tasks related to classes and objects.
