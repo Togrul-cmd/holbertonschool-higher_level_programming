@@ -1,9 +1,9 @@
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+#!/usr/bin/python3
+"""This module defines a class MyList inheriting List."""
+
+
+class MyList(list):
+    """This class inherits list and prints sorted list."""
+    def print_sorted(self):
+        """Prints sorted list."""
+        print(sorted(self))
