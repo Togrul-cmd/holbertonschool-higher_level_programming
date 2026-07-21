@@ -71,6 +71,11 @@ Passing values that are not integers should raise a TypeError.
         ...
     TypeError: my_tuple must be an integer
 
+    >>> bg.integer_validator("my_set", {1, 2, 3})
+    Traceback (most recent call last):
+        ...
+    TypeError: my_set must be an integer
+
     >>> bg.integer_validator("none_val", None)
     Traceback (most recent call last):
         ...
@@ -95,3 +100,13 @@ Passing integers that are 0 or less should raise a ValueError.
     Traceback (most recent call last):
         ...
     ValueError: negative_large must be greater than 0
+
+
+Missing arguments
+-----------------
+Passing too few arguments should raise a TypeError.
+
+    >>> bg.integer_validator("name_only")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
