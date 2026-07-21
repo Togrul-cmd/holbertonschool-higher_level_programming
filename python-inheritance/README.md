@@ -1,0 +1,1 @@
+# These are codes for tasks in inheritance concept in OOP of Python.
