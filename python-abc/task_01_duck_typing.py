@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-    Here is abstract class with two subclasses.
+Here is an abstract class with two subclasses.
 """
+import math
 from abc import ABC, abstractmethod
-from math import pi
 
 
 class Shape(ABC):
     """Abstract class."""
+    
     @abstractmethod
     def area(self):
         """To be implemented."""
@@ -21,33 +22,35 @@ class Shape(ABC):
 
 class Circle(Shape):
     """Inherits shape."""
+    
     def __init__(self, radius):
         """Assigns radius."""
         self.radius = radius
 
     def area(self):
-        """Calcualtes and returns area."""
-        return pi * self.radius ** 2
+        """Calculates and returns area."""
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
         """Calculates and returns perimeter."""
-        return 2 * pi * self.radius
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
     """Inherits shape."""
+    
     def __init__(self, width, height):
-        """Assigns radius."""
+        """Assigns width and height."""
         self.width = width
         self.height = height
 
     def area(self):
-        """Calcualtes and returns area."""
+        """Calculates and returns area."""
         return self.width * self.height
 
     def perimeter(self):
         """Calculates and returns perimeter."""
-        return 2 * (self.height + self.width)
+        return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
