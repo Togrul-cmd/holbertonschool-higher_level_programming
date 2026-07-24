@@ -10,10 +10,12 @@ class Shape(ABC):
     """Abstract class."""
     @abstractmethod
     def area(self):
+        """To be implemented."""
         pass
 
     @abstractmethod
     def perimeter(self):
+        """To be implemented."""
         pass
 
 
