@@ -24,13 +24,11 @@ class Shape(ABC):
 class Circle(Shape):
     """Circle class inheriting from Shape."""
 
-    def __init__(self, radius: float):
+    def __init__(self, radius):
         """Initializes a Circle."""
-        if radius <= 0:
-            raise ValueError("radius must be greater than 0")
         self.radius = radius
 
-    def area(self) -> float:
+    def area(self):
         """Calculates the area of the circle."""
         return pi * self.radius ** 2
 
@@ -42,14 +40,12 @@ class Circle(Shape):
 class Rectangle(Shape):
     """Rectangle class inheriting from Shape."""
 
-    def __init__(self, width: float, height: float):
+    def __init__(self, width, height):
         """Initializes a Rectangle."""
-        if width <= 0 or height <= 0:
-            raise ValueError("width and height must be greater than 0")
         self.width = width
         self.height = height
 
-    def area(self) -> float:
+    def area(self):
         """Calculates the area of the rectangle."""
         return self.width * self.height
 
@@ -58,7 +54,7 @@ class Rectangle(Shape):
         return 2 * (self.width + self.height)
 
 
-def shape_info(shape: Shape) -> None:
+def shape_info(shape):
     """Prints the area and perimeter of a shape."""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
