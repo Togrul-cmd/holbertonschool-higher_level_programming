@@ -57,8 +57,6 @@ if __name__ == "__main__":
     my_circle = Circle(5)
     my_rectangle = Rectangle(4, 6)
 # Pass each object to the shape_info function
-    print("Circle Info:")
     shape_info(my_circle)
     
-    print("Rectangle Info:")
     shape_info(my_rectangle)
