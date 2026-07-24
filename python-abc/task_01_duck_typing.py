@@ -50,13 +50,3 @@ def shape_info(shape):
     """Returns shape info."""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
-
-
-if __name__ == "__main__":
-    # Instantiate a Circle and a Rectangle
-    my_circle = Circle(5)
-    my_rectangle = Rectangle(4, 6)
-# Pass each object to the shape_info function
-    shape_info(my_circle)
-    
-    shape_info(my_rectangle)
