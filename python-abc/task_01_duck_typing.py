@@ -9,10 +9,12 @@ from math import pi
 class Shape(ABC):
     """Abstract class."""
     @abstractmethod
-    def area(self): ...
+    def area(self):
+        pass
 
     @abstractmethod
-    def perimeter(self): ...
+    def perimeter(self):
+        pass
 
 
 class Circle(Shape):
