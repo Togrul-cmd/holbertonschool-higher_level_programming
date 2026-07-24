@@ -1,14 +1,15 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
-Module defining an abstract Shape class and subclasses.
+Module defining an abstract Shape class and two subclasses.
 """
-import math
+
 from abc import ABC, abstractmethod
+from math import pi
 
 
 class Shape(ABC):
     """Abstract Shape class."""
-    
+
     @abstractmethod
     def area(self):
         """Calculates area."""
@@ -22,23 +23,23 @@ class Shape(ABC):
 
 class Circle(Shape):
     """Circle class inheriting from Shape."""
-    
+
     def __init__(self, radius):
         """Initializes a Circle."""
         self.radius = radius
 
     def area(self):
         """Calculates the area of the circle."""
-        return math.pi * self.radius ** 2
+        return pi * (self.radius ** 2)
 
     def perimeter(self):
         """Calculates the perimeter of the circle."""
-        return 2 * math.pi * self.radius
+        return 2 * pi * self.radius
 
 
 class Rectangle(Shape):
     """Rectangle class inheriting from Shape."""
-    
+
     def __init__(self, width, height):
         """Initializes a Rectangle."""
         self.width = width
@@ -57,10 +58,3 @@ def shape_info(shape):
     """Prints the area and perimeter of a shape."""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
-
-if __name__ == '__main__':
-    my_rectangle = Rectangle(3, 4)
-    my_circle = Circle(5)
-
-    shape_info(my_circle)
-    shape_info(my_rectangle)
