@@ -3,8 +3,8 @@
 Module defining a Shape abstract base class and demonstrating
 duck typing with Circle and Rectangle subclasses.
 """
+import math
 from abc import ABC, abstractmethod
-from math import pi
 
 
 class Shape(ABC):
@@ -30,11 +30,11 @@ class Circle(Shape):
 
     def area(self):
         """Calculates and returns the area of the circle."""
-        return pi * self.radius ** 2
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
         """Calculates and returns the perimeter of the circle."""
-        return 2 * pi * self.radius
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
@@ -59,7 +59,5 @@ def shape_info(shape):
     Prints the area and perimeter of a shape relying on duck typing.
     Assumes the object passed has area() and perimeter() methods.
     """
-    area = shape.area()
-    perimeter = shape.perimeter()
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
