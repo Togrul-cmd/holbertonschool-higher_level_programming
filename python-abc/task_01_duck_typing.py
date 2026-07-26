@@ -66,7 +66,7 @@ def shape_info(shape):
 
 
 if __name__ == "__main__":
-    # The checker looks for these instantiations as per the Testing instructions
+    # The checker looks for these instantiations as per the Testing
     my_circle = Circle(radius=5)
     my_rectangle = Rectangle(width=4, height=7)
 
