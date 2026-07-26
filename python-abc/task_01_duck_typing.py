@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Module defining an abstract Shape class and two subclasses.
 """
@@ -58,6 +57,7 @@ def shape_info(shape):
     """Prints the area and perimeter of a shape."""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
+
 
 if __name__ == '__main__':
     obj_1 = Circle(5)
