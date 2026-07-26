@@ -26,17 +26,15 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Initializes the circle with a radius."""
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Calculates and returns the area of the circle."""
-        # Squaring a negative radius naturally makes it positive
         return math.pi * (self.radius ** 2)
 
     def perimeter(self):
         """Calculates and returns the perimeter of the circle."""
-        # Use abs() here to guarantee a positive perimeter for Check 7
-        return 2 * math.pi * abs(self.radius)
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
@@ -49,13 +47,11 @@ class Rectangle(Shape):
 
     def area(self):
         """Calculates and returns the area of the rectangle."""
-        # Use abs() to ensure positive area
-        return abs(self.width) * abs(self.height)
+        return self.width * self.height
 
     def perimeter(self):
         """Calculates and returns the perimeter of the rectangle."""
-        # Use abs() to ensure positive perimeter
-        return 2 * (abs(self.width) + abs(self.height))
+        return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
