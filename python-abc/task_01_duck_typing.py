@@ -25,8 +25,8 @@ class Circle(Shape):
     """Class representing a circle."""
 
     def __init__(self, radius):
-        """Initializes the circle with a radius, converting to absolute."""
-        self.radius = abs(radius)
+        """Initializes the circle with a radius."""
+        self.radius = radius
 
     def area(self):
         """Calculates and returns the area of the circle."""
@@ -41,9 +41,9 @@ class Rectangle(Shape):
     """Class representing a rectangle."""
 
     def __init__(self, width, height):
-        """Initializes the rectangle, converting dimensions to absolute."""
-        self.width = abs(width)
-        self.height = abs(height)
+        """Initializes the rectangle with width and height."""
+        self.width = width
+        self.height = height
 
     def area(self):
         """Calculates and returns the area of the rectangle."""
@@ -59,16 +59,5 @@ def shape_info(shape):
     Prints the area and perimeter of a shape relying on duck typing.
     Assumes the object passed has area() and perimeter() methods.
     """
-    area = shape.area()
-    perimeter = shape.perimeter()
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
-
-
-if __name__ == "__main__":
-    # The checker looks for these instantiations as per the Testing
-    my_circle = Circle(radius=5)
-    my_rectangle = Rectangle(width=4, height=7)
-
-    shape_info(my_circle)
-    shape_info(my_rectangle)
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
