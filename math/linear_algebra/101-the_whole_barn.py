@@ -6,8 +6,8 @@ def add_matrices(mat1, mat2):
     """Adds 2 matrices."""
     if not isinstance(mat1, list) and not isinstance(mat2, list):
         return mat1 + mat2
-    if not isinstance(mat1, list) or not isinstance(mat2, list)
-    or len(mat1) != len(mat2):
+    if (not isinstance(mat1, list) or not isinstance(mat2, list)
+    or len(mat1) != len(mat2)):
         return None
     result = []
     for add1, add2 in zip(mat1, mat2):
