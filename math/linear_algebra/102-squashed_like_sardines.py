@@ -8,7 +8,7 @@ def cat_matrices(mat1, mat2, axis=0):
         return None
     if axis == 0:
         if isinstance(mat1[0], list) and isinstance(mat2[0], list):
-            if cat_matrices(mat1[0], mat2[0]) is None:
+            if cat_matrices(mat1[0], mat2[0], axis=0) is None:
                 return None
         elif isinstance(mat1[0], list) != isinstance(mat2[0], list):
             return None
