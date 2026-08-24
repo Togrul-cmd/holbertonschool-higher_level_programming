@@ -6,6 +6,7 @@ Module that concatenates two DataFrames (bitstamp on top of coinbase)
 import pandas as pd
 index = __import__('10-index').index
 
+
 def concat(df1, df2):
     """
     Concatenates two DataFrames with keys and limited timestamp selection.
