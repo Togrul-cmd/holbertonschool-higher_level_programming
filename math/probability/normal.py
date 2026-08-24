@@ -128,9 +128,6 @@ class Normal:
         return cdf
 
 
-""" defines Normal class that represents normal distribution """
-
-
 class Normal:
     """
     class that represents normal distribution
