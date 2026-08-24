@@ -6,6 +6,7 @@ Module that creates a hierarchical (MultiIndex) DataFrame from two sources
 import pandas as pd
 index = __import__('10-index').index
 
+
 def hierarchy(df1, df2):
     """
     Creates a MultiIndex DataFrame with Timestamp as first level and
@@ -13,7 +14,6 @@ def hierarchy(df1, df2):
 
     Steps:
     - Index both dataframes on 'Timestamp'
-    - Select rows from both dataframes between timestamps 1417411980 and 1417417980
     - Concatenate with keys
     - Ensure Timestamp is the first level of the MultiIndex
     - Sort chronologically
@@ -45,4 +45,3 @@ def hierarchy(df1, df2):
     df_concat = df_concat.sort_index(level=0)
 
     return df_concat
-
