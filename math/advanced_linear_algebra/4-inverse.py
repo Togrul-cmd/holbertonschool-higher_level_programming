@@ -98,9 +98,9 @@ def inverse(matrix):
     """
     mat_l = len(matrix)
 
-    if type(matrix) != list or len(matrix) == 0:
+    if not isinstance(matrix, list) or len(matrix) == 0:
         raise TypeError("matrix must be a list of lists")
-    if not all([type(m) == list for m in matrix]):
+    if not all(isinstance(m, list) for m in matrix):
         raise TypeError("matrix must be a list of lists")
     if matrix == [[]]:
         raise ValueError("matrix must be a non-empty square matrix")
@@ -109,14 +109,16 @@ def inverse(matrix):
     if not all(mat_l == len(col) for col in matrix):
         raise ValueError("matrix must be a non-empty square matrix")
     if mat_l == 1 and len(matrix[0]) == 1:
-        return [[1/(matrix[0][0])]]
+        if matrix[0][0] == 0:
+            return None
+        return [[1 / matrix[0][0]]]
     if mat_l == 1:
         if matrix[0][0] == 0:
             return None
-    if determinant(matrix) == 0:
+    det = determinant(matrix)
+    if det == 0:
         return None
 
-    det = determinant(matrix)
     adjugate_mat = adjugate(matrix)
     inversed = [[mat_minor / det for mat_minor in row]
                 for row in adjugate_mat]
