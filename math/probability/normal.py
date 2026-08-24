@@ -125,7 +125,9 @@ class Normal:
         erf = erf - ((value ** 7) / 42) + ((value ** 9) / 216)
         erf *= (2 / (pi ** (1 / 2)))
         cdf = (1 / 2) * (1 + erf)
-        return cdf#!/usr/bin/env python3
+        return cdf
+
+
 """ defines Normal class that represents normal distribution """
 
 
