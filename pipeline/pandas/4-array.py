@@ -19,4 +19,3 @@ def array(df):
     arr = last_rows.to_numpy()
 
     return arr
-
