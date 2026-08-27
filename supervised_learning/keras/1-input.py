@@ -19,15 +19,13 @@ def build_model(nx, layers, activations, lambtha, keep_prob):
     returns:
         the compiled keras model
     """
-    reg = K.regularizers.l2(lambtha)
-    init = K.initializers.he_normal()
     inputs = K.Input(shape=(nx,))
+    reg = K.regularizers.l2(lambtha)
 
     # First layer
     layer = K.layers.Dense(
         layers[0],
         activation=activations[0],
-        kernel_initializer=init,
         kernel_regularizer=reg
     )(inputs)
 
@@ -37,7 +35,6 @@ def build_model(nx, layers, activations, lambtha, keep_prob):
         layer = K.layers.Dense(
             layers[i],
             activation=activations[i],
-            kernel_initializer=init,
             kernel_regularizer=reg
         )(drop)
 
